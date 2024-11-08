@@ -8,8 +8,8 @@ const Navigation = () => {
     '>
         <NavLink to={"/"} end className={
             ({isActive}) => {
-               return `w-full text-base text-center font-nunito m-2.5 bg-gray-200 text-gray-100 rounded capitalize font-semibold border-0 cursor-pointer
-               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan'} 
+               return `w-full text-base text-center font-nunito m-2.5  rounded capitalize font-semibold border-0 cursor-pointer
+               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan  bg-gray-200 text-gray-100'} 
                 `
             }
         }>
@@ -17,8 +17,8 @@ const Navigation = () => {
         </NavLink>
         <NavLink to={"/trending"} className={
             ({isActive}) => {
-               return `w-full text-base text-center font-nunito m-2.5 bg-gray-200 text-gray-100 rounded capitalize font-semibold border-0 cursor-pointer
-               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan'} 
+               return `w-full text-base text-center font-nunito m-2.5  rounded capitalize font-semibold border-0 cursor-pointer
+               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan bg-gray-200 text-gray-100'} 
                 `
             }
         }>
@@ -26,8 +26,8 @@ const Navigation = () => {
         </NavLink>
         <NavLink to={"/saved"} className={
             ({isActive}) => {
-               return `w-full text-base text-center font-nunito m-2.5 bg-gray-200 text-gray-100 rounded capitalize font-semibold border-0 cursor-pointer
-               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan'} 
+               return `w-full text-base text-center font-nunito m-2.5 rounded capitalize font-semibold border-0 cursor-pointer
+               ${isActive? "bg-cyan text-gray-300" : 'hover:text-cyan bg-gray-200 text-gray-100 '} 
                 `
             }
         }>
