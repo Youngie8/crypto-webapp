@@ -11,7 +11,7 @@ export const CryptoProvider = ({children}) => {
     const [searchData, setSearchData] = useState();
     const [coinSearch, setCoinSearch] = useState("");
     const [currency, setCurrency] = useState("usd");
-    const [sort, setSort] = useState("usd");
+    const [sortBy, setSortBy] = useState("market_cap_desc");
 
    
 
