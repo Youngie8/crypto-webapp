@@ -5,7 +5,7 @@ import selectIcon from "../assets/select-icon.svg";
 import { CryptoContext } from '../context/CryptoContext';
 
 const Filter = () => {
-  let {setCurrency} = useContext(CryptoContext);
+  let {setCurrency, setSortBy} = useContext(CryptoContext);
   const currencyRef = useRef(null)
 
   const handleCurrencySubmit = (e) => {
@@ -14,6 +14,13 @@ const Filter = () => {
     setCurrency(val)
     currencyRef.current.value = '';
   }
+
+  const handleSort = (e) => {
+    e.preventDefault()
+    let val = e.target.value
+    setSortBy(val)
+  }
+
   return (
     <div className='w-full h-12 border-2 border-gray-100 rounded-lg flex items-center justify-between relative'>
         <div><Search/></div>
@@ -30,7 +37,7 @@ const Filter = () => {
         <label className='relative flex justify-center items-center mr-6
         '>
           <span className='font-bold mr-2'>sort by: </span>
-          <select name='sortby' className='rounded bg-gray-200 text-base pl-2 pr-6 py-0.5 leading-4 capitalize outline-0 focus:outline-0'>
+          <select name='sortby' className='rounded bg-gray-200 text-base pl-2 pr-6 py-0.5 leading-4 capitalize outline-0 focus:outline-0' onClick={handleSort}>
             <option value="market_cap_desc">market cap descending</option>
             <option value="market_cap_asc">market cap ascending</option>
             <option value="volume_desc">volume descending</option>
